@@ -1,0 +1,38 @@
+.filepond{
+    position: absolute;
+    height: 222px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: .3;
+    z-index: -1;
+
+    &--root{
+        height:222px ;
+        width: inherit;
+        border:2px dashed $blue-500;
+        .filepond--drop-label{
+            min-height:unset;
+            //height: 100%;
+            z-index: 0;
+            label{
+                @extend .fw-bold;
+                color: $blue-700;
+                padding: 66px;
+                transform: translateY(107px);
+                cursor: pointer;
+            }
+           
+        }
+        // .filepond--credits{
+        //     @extend .d-none;
+        // }
+        .filepond--image-preview-wrapper{
+            z-index: 1;
+        }
+    }
+}
+.filepond--panel-root{
+    background-color: unset;
+}

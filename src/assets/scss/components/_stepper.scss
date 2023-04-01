@@ -1,0 +1,80 @@
+.stepper{
+    @extend .d-flex ,.justify-content-center, .align-items-baseline,.align-items-md-center,.align-items-lg-center, .mt-3,.mt-md-5,.mt-lg-5;
+    &-item{
+        // @include media-breakpoint-down(md){
+        //    &:last-child{
+        //     transform: translateY(-11px);
+        //    }
+        // }
+        @extend .d-flex ,.flex-column ,.justify-content-center,.align-items-center, .position-relative;
+        &:nth-child(2){
+            @extend .mx-4;
+
+        }
+        &:not(:last-child){
+            .stepper-item_icon{
+                &::after{
+                    content: "\27F6";
+                    position: absolute;
+                    top: 6px;
+                    right: -63px;
+                    font-size: 54px;
+                    color: $gray-400;
+                    @include media-breakpoint-down(md){
+                        top: 34px;
+                        right: -28px;
+                        font-size: 19px;
+
+                    }
+                 }
+            }
+        }
+        &_icon{
+            @extend .border, .border-2 ,.rounded-circle  ,.p-4 ,.d-flex ,.justify-content-between ,.align-items-center ,.bg-gray-400;
+         
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+        }
+        p{
+            @extend .text-gray-400 ,.fw-bold ,.mt-3,.text-center;
+        }
+    }
+    .active{
+        &:not(:last-child){
+            .stepper-item_icon{
+                &::after{
+                    content: "\27F6";
+                    position: absolute;
+                    top: 6px;
+                    right: -63px;
+                    font-size: 54px;
+                    color: $blue-500!important;
+                    @include media-breakpoint-down(md){
+                        top: 34px;
+                        right: -28px;
+                        font-size: 19px;
+
+                    }
+                }
+            }
+        }
+        .stepper-item_icon{
+                @extend .bg-blue-100,.border-blue-500;
+                svg{
+                    path{
+                        fill: $blue-500;
+                    }
+                }
+               
+             }
+             p{
+                @extend .text-blue-500;
+             }
+         
+    }
+    
+}
+

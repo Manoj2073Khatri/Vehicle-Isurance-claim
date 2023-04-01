@@ -1,0 +1,22 @@
+
+// 2. Include any default variable overrides here
+@import "abstracts/variables";
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+//abstracts
+@import "abstracts/customVariables";
+
+// layout
+@import "layouts/layout";
+
+// components
+@import "components/button";
+@import "components/stepper";
+@import "components/upload";
+
+// pages
+
+
+

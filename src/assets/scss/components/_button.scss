@@ -1,0 +1,10 @@
+.cta-btn{
+    transition: .3s ease-in ;
+    &:hover{
+        .arrow{
+            transform: translateX(5px);
+            transition: .2s ease-in ;
+           
+        }
+    }
+}
